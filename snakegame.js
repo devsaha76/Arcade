@@ -19,7 +19,7 @@ highScoreElement.innerText = `High Score: ${highScore}`;
 
 const homeIcon = document.querySelector('.home-icon');
 homeIcon.addEventListener('click', () => {
-    window.location.href = 'home.html';
+    window.location.href = 'index.html';
 });
 
 const changeFoodPosition = () => {

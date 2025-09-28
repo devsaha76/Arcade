@@ -12,7 +12,7 @@ const maxGuesses = 6;
 
 const homeIcon = document.querySelector('.home-icon');
 homeIcon.addEventListener('click', () => {
-    window.location.href = 'home.html';
+    window.location.href = 'index.html';
 });
 
 const resetGame = () => {

@@ -22,13 +22,13 @@ const showAlert = (message) => {
     });
 
     alertBox.querySelector('.back-to-menu-btn').addEventListener('click', () => {
-        window.location.href = 'home.html';
+        window.location.href = 'index.html';
     });
 };
 
 const homeIcon = document.querySelector('.home-icon');
 homeIcon.addEventListener('click', () => {
-    window.location.href = 'home.html';
+    window.location.href = 'index.html';
 });
 
 const initTimer = maxTime => {
