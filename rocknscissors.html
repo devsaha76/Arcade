@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock & Scissors | Arcade</title>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <script src="rocknscissors.js" defer></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Orbitron", serif;
+            letter-spacing: 2px;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: whitesmoke;
+        }
+
+        .home-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: #7d2ae8;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .container {
+            padding: 2rem 7rem;
+            border-radius: 14px;
+            background: white;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .result_images {
+            display: flex;
+            column-gap: 7rem;
+        }
+
+        .container.start .user_result {
+            transform-origin: left;
+            animation: userShake 0.7s ease infinite;
+        }
+
+        @keyframes userShake {
+            50% {
+                transform: rotate(10deg);
+            }
+        }
+
+        .container.start .cpu_result {
+            transform-origin: right;
+            animation: cpuShake 0.7s ease infinite;
+        }
+
+        @keyframes cpuShake {
+            50% {
+                transform: rotate(10deg);
+            }
+        }
+
+        .result_images img {
+            width: 100px;
+        }
+
+        .user_result img {
+            transform: rotate(90deg);
+        }
+
+        .cpu_result img {
+            transform: rotate(-90deg) rotateY(180deg);
+        }
+
+        .result {
+            text-align: center;
+            font-size: 2rem;
+            color: #7d2ae8;
+            margin-top: 1.5rem;
+        }
+
+        .option_image img {
+            width: 50px;
+        }
+
+        .option_images {
+            display: flex;
+            margin: 2.5rem;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container.start .option_images {
+            pointer-events: none;
+        }
+
+        .option_image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0.5;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .option_image:hover {
+            opacity: 1;
+        }
+
+        .option_image.active {
+            opacity: 1;
+        }
+
+        .option_image img {
+            pointer-events: none;
+        }
+
+        .option_image p {
+            color: #7d2ae8;
+            font-size: 1.235rem;
+            margin-left: 1rem;
+            margin-top: 1rem;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="result_field">
+            <div class="result_images">
+                <span class="user_result">
+                    <img src="iamges/rock.png" alt="">
+                </span>
+                <span class="cpu_result">
+                    <img src="iamges/rock.png" alt="">
+                </span>
+            </div>
+            <div class="result">Lets Play!!!</div>
+        </div>
+
+        <div class="option_images">
+            <span class="option_image">
+                <img src="images/rock.png" alt="">
+                <p>Rock</p>
+            </span>
+            <span class="option_image">
+                <img src="images/paper.png" alt="">
+                <p>Paper</p>
+            </span>
+            <span class="option_image">
+                <img src="images/scissors.png" alt="">
+                <p>Scissors</p>
+            </span>
+        </div>
+        <i class="bx bx-home home-icon"></i>
+    </section>
+</body>
+
+</html>

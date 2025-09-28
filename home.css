@@ -1,0 +1,215 @@
+#bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    object-fit: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', sans-serif;
+    color: antiquewhite;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 
+        6px 0 #44447b,
+        -2px 0 #44447b,
+        0 2px #44447b,
+        0 -2px #44447b,
+        2px 2px #44447b,
+        -2px -2px #44447b,
+        -2px 2px #44447b,
+        2px -2px #44447b;
+}
+
+.typing-text {
+    font-size: 3.5rem;
+    color: #ffffff;
+    font-weight: bold;
+    display: inline;
+}
+
+.typing-cursor {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    display: inline;
+    animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.form-container {
+    position: relative;
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #ffffff;
+    z-index: 30;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    outline: none;
+    font-family: inherit;
+}
+
+
+input {
+    background: rgba(255, 255, 255, 0.85);
+    margin-bottom: 20px;
+}
+
+select {
+    background: rgba(255, 255, 255, 0.85);
+    margin-bottom: 90px;
+}
+
+button {
+    background: linear-gradient(135deg, #ff5ec8, #ff7b7b);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.1s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 94, 200, 0.4);
+}
+
+.custom-dropdown {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.dropdown-selected {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.dropdown-selected:hover {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-selected i {
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.dropdown-selected.active i {
+    transform: rotate(180deg);
+}
+
+.dropdown-list {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 30;
+    scroll-behavior: smooth;
+}
+
+.dropdown-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.dropdown-list li:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-list img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+
+.music-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    z-index: 30;
+}
+
+.music-button i {
+    font-size: 2.5rem;
+    color: #fff;
+}

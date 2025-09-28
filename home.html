@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Homepage</title>
+    <link rel="stylesheet" href="home.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+        <video autoplay muted loop id="bg-video">
+            <source src="images/home.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1>Arcade</h1>
+        <h1>Pixels</h1>
+        <div class="form-container">
+            <form id="game-form">
+                <label for="name">Enter Your Name:</label>
+                <input type="text" id="name" placeholder="Your name..." required>
+
+                <label for="game">Select a Game to Play:</label>
+                <div class="custom-dropdown">
+                    <div class="dropdown-selected">
+                        <span>Select a game to play</span>
+                        <i class="bx bx-chevron-down"></i>
+                    </div>
+                    <ul class="dropdown-list">
+                        <li data-game="wscramble.html">
+                            <img src="images/icon01.png" alt="Word Scramble Icon">
+                            Word Scramble
+                        </li>
+                        <li data-game="snakegame.html">
+                            <img src="images/icon03.png" alt="Snake Game Icon">
+                            Snake Game
+                        </li>
+                        <li data-game="rocknscissors.html">
+                            <img src="images/icon04.png" alt="Rock Paper Scissor">
+                            Rock Paper Scissor
+                        </li>
+                        <li data-game="hangman.html">
+                            <img src="images/icon05.png" alt="Rock Paper Scissor">
+                            HangMan Game
+                        </li>
+                    </ul>
+                </div>
+
+                <button type="submit">Start</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="music-button" id="music-button">
+        <i class='bx bx-play' style='color:#fff6f6'  ></i>
+    </div>
+
+    <audio id="background-music" loop>
+        <source src="bg-music.mp3" type="audio/mp3">
+    </audio>
+    <script src="home.js"></script>
+</body>
+
+</html>
